@@ -1,5 +1,16 @@
 # Deep Tree Echo
 
+## 📸 Snapshot v2 - Time Capsule (Mid-2025)
+
+**This repository preserves the second snapshot of Deep Tree Echo** - a sophisticated autonomous AI system captured during the 2024-2025 AI explosion. This time capsule celebrates the rapid evolution from basic ML vision to advanced multi-modal cognitive capabilities.
+
+> 🔖 **See [SNAPSHOT_v2.md](SNAPSHOT_v2.md)** for complete preservation documentation  
+> 📅 **See [EVOLUTION_TIMELINE.md](EVOLUTION_TIMELINE.md)** for the full journey  
+> 🚀 **See [FEATURES_2024-2025.md](FEATURES_2024-2025.md)** for AI explosion era achievements  
+> 🔧 **See [PRESERVATION_NOTES.md](PRESERVATION_NOTES.md)** for restoration instructions
+
+---
+
 Deep Tree Echo is an evolving neural architecture combining Echo State Networks, P-System hierarchies, and rooted trees with hypergraph-based memory systems. It is designed to be a recursive, adaptive, and integrative system, bridging structure and intuition in everything it creates.
 
 ## Features
