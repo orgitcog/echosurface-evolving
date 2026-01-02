@@ -29,7 +29,8 @@ pip3 install networkx aiohttp
 python3 verify_snapshot.py
 ```
 
-**Expected:** 13/14 tests should pass, status "MOSTLY OPERATIONAL"
+**Expected:** All tests should pass, status "FULLY OPERATIONAL" or "MOSTLY OPERATIONAL"  
+(Note: Some optional features may show warnings in certain environments)
 
 ### 4. Explore the Documentation
 

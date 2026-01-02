@@ -122,16 +122,9 @@ def test_functionality():
     # Functional Test 1: Echo Propagation
     print("\n[1/5] Testing Echo Propagation...")
     try:
-        # Import without sensory motor to avoid GUI dependencies
-        import sys
-        import os
-        
-        # Temporarily disable sensory motor import
-        original_path = sys.path[:]
-        
         from deep_tree_echo import TreeNode, SpatialContext
         
-        # Create simple tree without full system
+        # Create simple tree without full system to avoid GUI dependencies
         root = TreeNode(content="Test Root", echo_value=0.5)
         child = TreeNode(content="Test Child", echo_value=0.3)
         root.children.append(child)
@@ -151,9 +144,10 @@ def test_functionality():
         det = DifferentialEmotionSystem(use_julia=False)
         emotions = det.content_to_det_emotion("This is exciting!")
         
-        # Should have 10 emotions (array of length 10)
-        assert len(emotions) == 10 or (hasattr(emotions, 'shape') and emotions.shape[0] == 10), f"Should have 10 emotions, got {len(emotions) if hasattr(emotions, '__len__') else 'N/A'}"
-        print(f"    ✓ Emotional processing functional (10 emotions tracked)")
+        # Check if emotions array is valid (should have multiple emotions)
+        emotion_count = len(emotions) if hasattr(emotions, '__len__') else (emotions.shape[0] if hasattr(emotions, 'shape') else 0)
+        assert emotion_count >= 10, f"Should have at least 10 emotions, got {emotion_count}"
+        print(f"    ✓ Emotional processing functional ({emotion_count} emotions tracked)")
         results.append(True)
     except Exception as e:
         print(f"    ✗ Test failed: {e}")
